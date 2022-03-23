@@ -17,7 +17,7 @@ abstract class BaseVmDbFragment<VM : BaseViewModel, DB : ViewDataBinding> : Base
     override fun layoutId() = 0
 
     //该类绑定的ViewDataBinding
-    private var _binding: DB? = null
+    protected var _binding: DB? = null
     val mDatabind: DB get() = _binding!!
 
     override fun onCreateView(

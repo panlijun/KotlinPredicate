@@ -4,7 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/layout_custom_progress_dialog_view.xml" value="0.1911231884057971" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/layout_empty.xml" value="0.22056159420289856" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/layout_error.xml" value="0.22056159420289856" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/layout_fotter_loadmore.xml" value="0.22056159420289856" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/layout_loading.xml" value="0.22056159420289856" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/main_activity.xml" value="0.146403242147923" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/main_fragment.xml" value="0.1" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/menu/main_bottom_navigation.xml" value="0.2708333333333333" />
       </map>
     </option>
   </component>
