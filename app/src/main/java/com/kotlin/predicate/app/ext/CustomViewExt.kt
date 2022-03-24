@@ -3,6 +3,10 @@ package com.kotlin.predicate.app.ext
 import ErrorCallback
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.graphics.Typeface
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.style.StyleSpan
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
@@ -11,6 +15,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -20,6 +25,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.tabs.TabLayout
 import com.kingja.loadsir.core.LoadService
 import com.kingja.loadsir.core.LoadSir
 import com.kotlin.predicate.R
@@ -31,6 +37,7 @@ import com.mvvm.core.base.appContext
 import com.mvvm.core.ext.util.toHtml
 import com.yanzhenjie.recyclerview.SwipeRecyclerView
 import me.hgj.jetpackmvvm.demo.app.weight.recyclerview.DefineLoadMoreView
+
 
 fun LoadService<*>.setErrorText(message: String) {
     if (message.isNotEmpty()) {
@@ -366,5 +373,60 @@ fun BottomNavigationView.interceptLongClick(vararg ids: Int) {
             .setOnLongClickListener {
                 true
             }
+    }
+}
+
+fun TabLayout.setSelectBold() {
+    this.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+        override fun onTabSelected(tab: TabLayout.Tab?) {
+            if (tab == null || tab.text == null) {
+                return
+            }
+
+            val selectTab = tab.text.toString().trim()
+
+            val spannableString = SpannableString(selectTab)
+            val styleSpan = StyleSpan(Typeface.BOLD)
+            spannableString.setSpan(
+                styleSpan,
+                0,
+                selectTab.length,
+                Spanned.SPAN_INCLUSIVE_EXCLUSIVE
+            )
+
+            tab.text = spannableString
+        }
+
+        override fun onTabUnselected(tab: TabLayout.Tab?) {
+            if (tab == null || tab.text == null) {
+                return
+            }
+
+            val selectTab = tab.text.toString().trim()
+
+            val spannableString = SpannableString(selectTab)
+            val styleSpan = StyleSpan(Typeface.NORMAL)
+            spannableString.setSpan(
+                styleSpan,
+                0,
+                selectTab.length,
+                Spanned.SPAN_INCLUSIVE_EXCLUSIVE
+            )
+
+            tab.text = spannableString
+        }
+
+        override fun onTabReselected(tab: TabLayout.Tab?) {
+        }
+    })
+    if (this.size > 0 && this.selectedTabPosition >= 0) {
+        val tab = this.getTabAt(this.selectedTabPosition) ?: return
+        val selectTab = tab.text.toString().trim { it <= ' ' }
+
+        val spannableString = SpannableString(selectTab)
+        val styleSpan = StyleSpan(Typeface.BOLD)
+        spannableString.setSpan(styleSpan, 0, selectTab.length, Spanned.SPAN_INCLUSIVE_EXCLUSIVE)
+
+        tab.text = spannableString
     }
 }

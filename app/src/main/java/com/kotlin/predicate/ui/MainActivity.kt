@@ -6,6 +6,7 @@ import androidx.navigation.Navigation
 import com.blankj.utilcode.util.ToastUtils
 import com.kotlin.predicate.R
 import com.kotlin.predicate.app.base.BaseActivity
+import com.kotlin.predicate.app.util.StatusBarUtil
 import com.kotlin.predicate.databinding.MainActivityBinding
 
 class MainActivity : BaseActivity<MainActivityViewModel, MainActivityBinding>() {
@@ -30,6 +31,9 @@ class MainActivity : BaseActivity<MainActivityViewModel, MainActivityBinding>() 
                     }
                 }
             });
+
+        StatusBarUtil.initStatusView(this)
+        StatusBarUtil.setLightMode(this)
     }
 
     override fun createObserver() {

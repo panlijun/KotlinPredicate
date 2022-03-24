@@ -1,32 +1,17 @@
 package com.kotlin.predicate.ui.my
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import com.kotlin.predicate.R
+import com.kotlin.predicate.app.base.BaseFragment
+import com.kotlin.predicate.databinding.MyFragmentBinding
 
-class MyFragment : Fragment() {
+class MyFragment : BaseFragment<MyViewModel,MyFragmentBinding>() {
 
     companion object {
         fun newInstance() = MyFragment()
     }
 
-    private lateinit var viewModel: MyViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.my_fragment, container, false)
+    override fun initView(savedInstanceState: Bundle?) {
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MyViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
 }

@@ -1,13 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.my.MyFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:orientation="vertical"
+        tools:context=".ui.my.MyFragment">
 
-</FrameLayout>
+        <com.ziuici.ui.input.InputFromItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isSelect="false"
+            app:leftColor="#999999"
+            app:leftSize="18dp"
+            app:leftText="LEFT"
+            app:rightColor="#123456"
+            app:rightHint="HINT"
+            app:rightSize="8dp"
+            app:rightText="RIGHT"
+            app:showLine="true" />
+
+        <com.ziuici.ui.input.InputFromItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isSelect="true"
+            app:leftColor="#999999"
+            app:leftSize="18dp"
+            app:leftText="LEFT"
+            app:rightColor="#123456"
+            app:rightHint="HINT"
+            app:rightSize="8dp"
+            app:rightText="RIGHT"
+            app:showLine="false" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
