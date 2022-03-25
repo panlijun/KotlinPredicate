@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="ui_text_color">#061525</color>
-    <color name="ui_hint_clor">#999999</color>
+    <color name="ui_title_color">#061525</color>
+    <color name="ui_content_color">#666666</color>
+    <color name="ui_hint_color">#999999</color>
     <color name="ui_line_color">#E4E4E4</color>
     <color name="ui_red_color">#F78080</color>
 </resources>

@@ -11,15 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/text_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:textColor="#061525"
-            android:textSize="15dp"
+            android:textColor="@color/ui_title_color"
+            android:textSize="@dimen/ui_title_size"
             android:textStyle="bold"
             tools:text="标题" />
 
@@ -31,11 +33,37 @@
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
             android:background="@null"
+            android:cursorVisible="true"
             android:gravity="right|center_vertical"
-            android:textColor="#061525"
-            android:textColorHint="#999999"
-            android:textSize="14dp"
-            tools:hint="请选择" />
+            android:lines="1"
+            android:maxEms="30"
+            android:singleLine="true"
+            android:textColor="@color/ui_content_color"
+            android:textColorHint="@color/ui_hint_color"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/ui_content_size"
+            tools:hint="请选择"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:cursorVisible="true"
+            android:gravity="right|center_vertical"
+            android:lines="1"
+            android:maxEms="30"
+            android:singleLine="true"
+            android:textColor="@color/ui_content_color"
+            android:textColorHint="@color/ui_hint_color"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/ui_content_size"
+            android:visibility="gone"
+            tools:hint="请选择"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/arrow"

@@ -1,19 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="InputFromItem">
-        <attr name="leftText" format="string" />
-        <attr name="leftSize" format="dimension" />
-        <attr name="leftColor" format="color" />
 
-        <attr name="rightText" format="string" />
-        <attr name="rightSize" format="dimension" />
-        <attr name="rightColor" format="color" />
-        <attr name="rightHint" format="string" />
-        <attr name="hintColor" format="color" />
+    <attr name="leftText" format="string" />
+    <attr name="leftSize" format="dimension" />
+    <attr name="leftColor" format="color" />
 
-        <attr name="showLine" format="boolean" />
-        <attr name="isSelect" format="boolean" />
+    <attr name="rightText" format="string" />
+    <attr name="rightSize" format="dimension" />
+    <attr name="rightColor" format="color" />
+    <attr name="rightHint" format="string" />
+    <attr name="hintColor" format="color" />
+
+    <attr name="showLine" format="boolean" />
+    <attr name="isSelect" format="boolean" />
+
+    <declare-styleable name="FromInputItem">
+        <attr name="leftText" />
+        <attr name="leftSize" />
+        <attr name="leftColor" />
+
+        <attr name="rightText" />
+        <attr name="rightSize" />
+        <attr name="rightColor" />
+        <attr name="rightHint" />
+        <attr name="hintColor" />
+
+        <attr name="showLine" />
+        <attr name="isSelect" />
 
     </declare-styleable>
+
+
+    <declare-styleable name="FromImageItem">
+        <attr name="leftText" />
+        <attr name="leftSize" />
+        <attr name="leftColor" />
+
+        <attr name="showLine" />
+    </declare-styleable>
+
 </resources>

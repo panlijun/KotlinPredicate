@@ -11,33 +11,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:paddingTop="100dp"
         tools:context=".ui.my.MyFragment">
 
-        <com.ziuici.ui.input.InputFromItem
+
+        <com.ziuici.ui.from.FromImageItem
+            android:id="@+id/fromHead"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:isSelect="false"
-            app:leftColor="#999999"
-            app:leftSize="18dp"
-            app:leftText="LEFT"
+            app:leftText="头像" />
+
+        <com.ziuici.ui.from.FromInputItem
+            android:id="@+id/fromName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:leftText="用户名"
             app:rightColor="#123456"
-            app:rightHint="HINT"
-            app:rightSize="8dp"
-            app:rightText="RIGHT"
+            app:rightHint="请输入姓名"
+            app:rightText=""
             app:showLine="true" />
 
-        <com.ziuici.ui.input.InputFromItem
+        <com.ziuici.ui.from.FromInputItem
+            android:id="@+id/fromSecond"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:isSelect="true"
-            app:leftColor="#999999"
-            app:leftSize="18dp"
-            app:leftText="LEFT"
-            app:rightColor="#123456"
-            app:rightHint="HINT"
-            app:rightSize="8dp"
-            app:rightText="RIGHT"
-            app:showLine="false" />
+            app:leftText="生日"
+            app:rightHint="请选择生日" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>

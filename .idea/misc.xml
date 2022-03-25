@@ -14,9 +14,11 @@
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/layout_loading.xml" value="0.22056159420289856" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/main_activity.xml" value="0.146403242147923" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/main_fragment.xml" value="0.1" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/my_fragment.xml" value="0.20697463768115942" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/menu/main_bottom_navigation.xml" value="0.2708333333333333" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
-        <entry key="..\:/workspace/src/KotlinPredicate/uicore/src/main/res/layout/layout_input_from_item.xml" value="0.1859375" />
+        <entry key="..\:/workspace/src/KotlinPredicate/uicore/src/main/res/layout/layout_image_from_item.xml" value="0.32653985507246375" />
+        <entry key="..\:/workspace/src/KotlinPredicate/uicore/src/main/res/layout/layout_input_from_item.xml" value="0.22" />
       </map>
     </option>
   </component>
