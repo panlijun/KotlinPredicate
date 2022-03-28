@@ -7,37 +7,295 @@
 
     </data>
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingTop="100dp"
-        tools:context=".ui.my.MyFragment">
+        android:background="@color/white">
 
-
-        <com.ziuici.ui.from.FromImageItem
-            android:id="@+id/fromHead"
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:leftText="头像" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_background" />
 
-        <com.ziuici.ui.from.FromInputItem
-            android:id="@+id/fromName"
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:leftText="用户名"
-            app:rightColor="#123456"
-            app:rightHint="请输入姓名"
-            app:rightText=""
-            app:showLine="true" />
+            android:layout_height="match_parent">
 
-        <com.ziuici.ui.from.FromInputItem
-            android:id="@+id/fromSecond"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:isSelect="true"
-            app:leftText="生日"
-            app:rightHint="请选择生日" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical"
+                tools:context=".ui.my.MyFragment">
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/toMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/action_bar_height"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_message"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/mainTextBlack" />
+
+
+                    <com.ruffian.library.widget.RImageView
+                        android:id="@+id/headImage"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        app:corner_radius="30dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/toMessage"
+                        tools:background="@color/mainTextBlack" />
+
+                    <TextView
+                        android:id="@+id/nameTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="7dp"
+                        android:text="黑化肥讳飞花"
+                        android:textColor="@color/mainTextBlack"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toRightOf="@id/headImage"
+                        app:layout_constraintTop_toTopOf="@id/headImage" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="7dp"
+                        android:background="@drawable/my_class_bg"
+                        android:drawableRight="@drawable/icon_arrow_right_small"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:lineHeight="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="黑化肥讳飞花"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/headImage"
+                        app:layout_constraintLeft_toLeftOf="@id/nameTxt" />
+
+
+                    <TextView
+                        android:id="@+id/changeMember"
+                        android:layout_width="66dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="17.5dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@drawable/change_member_bg"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:text="切换成员"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/headImage" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/card_white_bg">
+
+
+                    <ImageView
+                        android:id="@+id/levelImage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="12.5dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_level_1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@id/levelImage"
+                        app:layout_constraintLeft_toLeftOf="@+id/levelImage"
+                        app:layout_constraintRight_toRightOf="@+id/levelImage">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:src="@drawable/icon_star_selected" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:src="@drawable/icon_star_unselected" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:src="@drawable/icon_star_unselected" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginRight="15dp"
+                        android:drawableRight="@drawable/icon_arrow_blue"
+                        android:drawablePadding="8dp"
+                        android:text="体育能力"
+                        android:textColor="@color/mainTextBlack"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/card_white_bg">
+
+
+                    <TextView
+                        android:id="@+id/my_icon_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="12dp"
+                        android:text="我的功能"
+                        android:textColor="@color/mainTextBlack"
+                        android:textSize="13dp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.ziuici.ui.icon.IconImage
+                        android:id="@+id/icon_sport_report"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        app:icon_src="@drawable/icon_sport_report"
+                        app:icon_text="运动记录"
+                        app:icon_width="45dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/my_icon_title"
+                        app:layout_constraintWidth_percent="0.33" />
+
+
+                    <com.ziuici.ui.icon.IconImage
+                        android:id="@+id/icon_homework"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:icon_src="@drawable/icon_homework"
+                        app:icon_text="课后作业"
+                        app:icon_width="45dp"
+                        app:layout_constraintLeft_toRightOf="@+id/icon_sport_report"
+                        app:layout_constraintTop_toTopOf="@+id/icon_sport_report"
+                        app:layout_constraintWidth_percent="0.33" />
+
+
+                    <com.ziuici.ui.icon.IconImage
+                        android:id="@+id/icon_plan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:icon_src="@drawable/icon_plan"
+                        app:icon_text="计划记录"
+                        app:icon_width="45dp"
+                        app:layout_constraintLeft_toRightOf="@+id/icon_homework"
+                        app:layout_constraintTop_toTopOf="@+id/icon_homework"
+                        app:layout_constraintWidth_percent="0.33" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/card_white_bg"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <com.ziuici.ui.from.FromInputItem
+                        android:id="@+id/fromHealth"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:isSelect="true"
+                        app:leftImage="@drawable/icon_record"
+                        app:leftText="健康记录"
+                        app:showLine="false" />
+
+                    <com.ziuici.ui.from.FromInputItem
+                        android:id="@+id/fromRecommend"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:isSelect="true"
+                        app:leftImage="@drawable/icon_recommend_friend"
+                        app:leftText="推荐给朋友"
+                        app:showLine="false" />
+
+
+                    <com.ziuici.ui.from.FromInputItem
+                        android:id="@+id/fromAchievement"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:isSelect="true"
+                        app:leftImage="@drawable/icon_achievement"
+                        app:leftText="我的成就"
+                        app:showLine="false" />
+
+                    <com.ziuici.ui.from.FromInputItem
+                        android:id="@+id/fromHelp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:isSelect="true"
+                        app:leftImage="@drawable/icon_help"
+                        app:leftText="帮助与反馈"
+                        app:showLine="false" />
+
+                    <com.ziuici.ui.from.FromInputItem
+                        android:id="@+id/fromSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:isSelect="true"
+                        app:leftImage="@drawable/icon_setting"
+                        app:leftText="设置"
+                        app:showLine="false" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
 </layout>

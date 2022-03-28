@@ -6,7 +6,7 @@
     android:paddingLeft="15dp"
     android:paddingRight="15dp">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <LinearLayout
         android:id="@+id/lLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,6 +14,16 @@
         android:orientation="horizontal"
         android:paddingTop="2dp"
         android:paddingBottom="2dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/leftImg"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginRight="8dp"
+            android:scaleType="center"
+            android:visibility="gone"
+            tools:src="@color/ui_red_color"
+            tools:visibility="visible" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/text_left"
@@ -71,9 +81,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:scaleType="center"
-            android:src="@drawable/arrow_right" />
+            android:src="@drawable/icon_arrow_right" />
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    </LinearLayout>
 
     <View
         android:id="@+id/line"

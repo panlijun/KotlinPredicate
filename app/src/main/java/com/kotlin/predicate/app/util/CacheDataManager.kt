@@ -30,7 +30,7 @@ object CacheDataManager {
                 return
             }
             it.externalCacheDir?.let { file ->
-                if(deleteDir(file)){
+                if (deleteDir(file)) {
                     activity.showMessage("清理缓存成功")
                 }
             }

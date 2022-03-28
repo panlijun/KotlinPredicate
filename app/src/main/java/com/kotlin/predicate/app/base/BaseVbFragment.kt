@@ -9,7 +9,8 @@ import com.mvvm.core.base.fragment.BaseVmDbFragment
 import com.mvvm.core.base.fragment.BaseVmVbFragment
 import com.mvvm.core.base.viewmodel.BaseViewModel
 
-abstract class BaseVbFragment<VM : BaseViewModel, DB : ViewDataBinding> : BaseVmVbFragment<VM, DB>() {
+abstract class BaseVbFragment<VM : BaseViewModel, DB : ViewDataBinding> :
+    BaseVmVbFragment<VM, DB>() {
 
 
     abstract override fun initView(savedInstanceState: Bundle?)

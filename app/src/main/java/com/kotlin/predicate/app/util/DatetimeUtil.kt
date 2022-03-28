@@ -21,12 +21,12 @@ object DatetimeUtil {
      */
     val now: Date
         get() = Date(Date().time)
+
     /**
      * 获取现在时刻
      */
     val nows: Date
         get() = formatDate(DATE_PATTERN, now)
-
 
 
     /**
@@ -42,6 +42,7 @@ object DatetimeUtil {
         }
 
     }
+
     /**
      * Date to Strin
      */
@@ -96,8 +97,8 @@ object DatetimeUtil {
     /**
      * 获得指定时间的日期
      */
-    fun getCustomTime(dateStr: String):Date{
-        return formatDate(DATE_PATTERN,dateStr)
+    fun getCustomTime(dateStr: String): Date {
+        return formatDate(DATE_PATTERN, dateStr)
     }
 
 }

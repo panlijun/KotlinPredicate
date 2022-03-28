@@ -14,6 +14,7 @@
 
     <attr name="showLine" format="boolean" />
     <attr name="isSelect" format="boolean" />
+    <attr name="leftImage" format="reference" />
 
     <declare-styleable name="FromInputItem">
         <attr name="leftText" />
@@ -28,9 +29,9 @@
 
         <attr name="showLine" />
         <attr name="isSelect" />
+        <attr name="leftImage" />
 
     </declare-styleable>
-
 
     <declare-styleable name="FromImageItem">
         <attr name="leftText" />
@@ -40,4 +41,13 @@
         <attr name="showLine" />
     </declare-styleable>
 
+
+    <declare-styleable name="IconImage">
+        <attr name="icon_src" format="reference" />
+        <attr name="icon_width" format="dimension" />
+        <attr name="icon_text" format="string" />
+        <attr name="icon_text_size" format="dimension" />
+        <attr name="icon_text_color" format="color" />
+        <attr name="icon_margin" format="dimension" />
+    </declare-styleable>
 </resources>

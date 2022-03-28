@@ -3,4 +3,5 @@
 
     <dimen name="ui_title_size">21.5dp</dimen>
     <dimen name="ui_content_size">13dp</dimen>
+    <dimen name="ui_ico_text_size">11dp</dimen>
 </resources>

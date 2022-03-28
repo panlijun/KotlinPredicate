@@ -62,10 +62,11 @@ object CacheUtil {
         val kv = MMKV.mmkvWithID("app")
         return kv.decodeBool("first", true)
     }
+
     /**
      * 是否是第一次登陆
      */
-    fun setFirst(first:Boolean): Boolean {
+    fun setFirst(first: Boolean): Boolean {
         val kv = MMKV.mmkvWithID("app")
         return kv.encode("first", first)
     }
@@ -77,13 +78,15 @@ object CacheUtil {
         val kv = MMKV.mmkvWithID("app")
         return kv.decodeBool("top", true)
     }
+
     /**
      * 设置首页是否开启获取指定文章
      */
-    fun setIsNeedTop(isNeedTop:Boolean): Boolean {
+    fun setIsNeedTop(isNeedTop: Boolean): Boolean {
         val kv = MMKV.mmkvWithID("app")
         return kv.encode("top", isNeedTop)
     }
+
     /**
      * 获取搜索历史缓存数据
      */
@@ -99,6 +102,6 @@ object CacheUtil {
 
     fun setSearchHistoryData(searchResponseStr: String) {
         val kv = MMKV.mmkvWithID("cache")
-        kv.encode("history",searchResponseStr)
+        kv.encode("history", searchResponseStr)
     }
 }

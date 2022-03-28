@@ -1,4 +1,3 @@
-
 import com.kingja.loadsir.callback.Callback
 import com.kotlin.predicate.R
 

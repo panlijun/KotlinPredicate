@@ -15,7 +15,7 @@ class MainFragment : BaseFragment<MainViewModel, MainFragmentBinding>() {
     override fun initView(savedInstanceState: Bundle?) {
 
 
-        mDatabind.viewPager2.isUserInputEnabled =false
+        mDatabind.viewPager2.isUserInputEnabled = false
         mDatabind.viewPager2.adapter = object : FragmentStateAdapter(this) {
             override fun getItemCount(): Int {
                 return 2

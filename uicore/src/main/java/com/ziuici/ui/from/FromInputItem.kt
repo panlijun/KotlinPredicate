@@ -5,6 +5,8 @@ import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatEditText
@@ -19,7 +21,7 @@ class FromInputItem : RelativeLayout, FromItemListener {
     var leftTextView: TextView? = null
     var rightTextView: TextView? = null
     var line: View? = null
-    var lLayout: LinearLayoutCompat? = null
+    var lLayout: LinearLayout? = null
     var showRed: Boolean = false
     var mustRequired: Boolean = true
 
@@ -59,13 +61,16 @@ class FromInputItem : RelativeLayout, FromItemListener {
         val showLine = a.getBoolean(R.styleable.FromInputItem_showLine, true)
         val isSelect = a.getBoolean(R.styleable.FromInputItem_isSelect, false)
 
+        val leftImage = a.getResourceId(R.styleable.FromInputItem_leftImage, 0);
+
         leftTextView = view.findViewById<AppCompatTextView>(R.id.text_left)
         val edtRight = view.findViewById<AppCompatEditText>(R.id.edt_right)
         val textRight = view.findViewById<AppCompatTextView>(R.id.text_right)
 
-        lLayout = view.findViewById<LinearLayoutCompat>(R.id.lLayout)
+        lLayout = view.findViewById<LinearLayout>(R.id.lLayout)
         val arrow = view.findViewById<AppCompatImageView>(R.id.arrow)
         line = view.findViewById<View>(R.id.line)
+        val leftImg = view.findViewById<ImageView>(R.id.leftImg);
 
         if (isSelect) {
             rightTextView = textRight
@@ -102,6 +107,14 @@ class FromInputItem : RelativeLayout, FromItemListener {
             arrow.visibility = GONE
             rightTextView?.isEnabled = true
         }
+
+        if (leftImage > 0) {
+            leftImg.visibility = VISIBLE
+            leftImg.setImageResource(leftImage);
+        } else {
+            leftImg.visibility = GONE
+        }
+
         a.recycle()
     }
 

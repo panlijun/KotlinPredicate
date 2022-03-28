@@ -2,6 +2,9 @@ package com.kotlin.predicate.app
 
 import ErrorCallback
 import android.support.multidex.MultiDex
+import android.view.Gravity
+import android.widget.Toast
+import com.blankj.utilcode.util.ToastUtils
 import com.kingja.loadsir.callback.SuccessCallback
 import com.kingja.loadsir.core.LoadSir
 import com.kotlin.predicate.app.ext.getProcessName
@@ -38,6 +41,8 @@ class App : BaseApp() {
         eventViewModelInstance = getAppViewModelProvider().get(EventViewModel::class.java)
         appViewModelInstance = getAppViewModelProvider().get(AppViewModel::class.java)
         MultiDex.install(this)
+        ToastUtils.setGravity(Gravity.CENTER,0,0)
+
         //界面加载管理 初始化
         LoadSir.beginBuilder()
             .addCallback(LoadingCallback())//加载

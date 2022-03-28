@@ -27,20 +27,20 @@ class HomeChildViewModel : BaseViewModel() {
     }
 
     init {
-        normalItem.add(HomeProject(R.mipmap.ic_launcher, "跳绳"))
-        normalItem.add(HomeProject(R.mipmap.ic_launcher, "仰卧起坐"))
-        normalItem.add(HomeProject(R.mipmap.ic_launcher, "原地跑步"))
-        normalItem.add(HomeProject(R.mipmap.ic_launcher, "深蹲"))
-        normalItem.add(HomeProject(R.mipmap.ic_launcher, "坐位提体前屈"))
-        normalItem.add(HomeProject(R.mipmap.ic_launcher, "开合跳"))
-        normalItem.add(HomeProject(R.mipmap.ic_launcher, "俯卧撑"))
-        normalItem.add(HomeProject(R.mipmap.ic_launcher, "跪姿俯卧撑"))
+        normalItem.add(HomeProject(R.drawable.icon_sport_jump, "跳绳"))
+        normalItem.add(HomeProject(R.drawable.icon_sport_sit_up, "仰卧起坐"))
+        normalItem.add(HomeProject(R.drawable.ico_sport_run, "原地跑步"))
+        normalItem.add(HomeProject(R.drawable.icon_squat_down, "深蹲"))
+        normalItem.add(HomeProject(R.drawable.icon_sport_flexion, "坐位提体前屈"))
+        normalItem.add(HomeProject(R.drawable.icon_sport_jumping_jacks, "开合跳"))
+        normalItem.add(HomeProject(R.drawable.icon_sport_push_up, "俯卧撑"))
+        normalItem.add(HomeProject(R.drawable.icon_sport_push_up2, "跪姿俯卧撑"))
 
 
-        funnyItems.add(HomeProject(R.mipmap.ic_launcher, "周游地球"))
-        funnyItems.add(HomeProject(R.mipmap.ic_launcher, "跳格子游戏"))
-        funnyItems.add(HomeProject(R.mipmap.ic_launcher, "跳框游戏"))
-        funnyItems.add(HomeProject(R.mipmap.ic_launcher, "坐西瓜"))
+        funnyItems.add(HomeProject(R.drawable.icon_travel_earth, "周游地球"))
+        funnyItems.add(HomeProject(R.drawable.icon_jump_frame, "跳格子游戏"))
+        funnyItems.add(HomeProject(R.drawable.icon_jumping_grid, "跳框游戏"))
+        funnyItems.add(HomeProject(R.drawable.icon_sport_flexion, "坐西瓜"))
 
     }
 }
