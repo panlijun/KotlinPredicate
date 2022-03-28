@@ -13,4 +13,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="mainTextBlack">#061525</color>
+    <color name="subTextBlack">#5A606A</color>
 </resources>
