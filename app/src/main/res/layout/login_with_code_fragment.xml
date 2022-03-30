@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.kotlin.predicate.ui.login.LoginWithCodeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".ui.login.LoginWithCodeFragment">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/action_bar_height"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:text="账户密码登录"
+            android:textColor="@color/mainTextBlack"
+            android:textSize="15dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/action_bar_height"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center_vertical"
+            android:text="欢迎登录|注册"
+            android:textColor="@color/mainTextBlack"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/llPhone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtTitle">
+
+            <TextView
+                android:id="@+id/phonePrefix"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="+86"
+                android:textColor="@color/ui_title_color"
+                android:textSize="15dp" />
+
+
+            <View
+                android:layout_width="@dimen/ui_line_size"
+                android:layout_height="15dp"
+                android:layout_marginRight="10dp"
+                android:background="#999999" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtPhone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="请输入手机号"
+                android:text="@={vm.phone}"
+                android:textColor="@color/ui_content_color"
+                android:textColorHint="@color/ui_hint_color"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/line_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/ui_line_color"
+            app:layout_constraintLeft_toLeftOf="@id/llPhone"
+            app:layout_constraintRight_toRightOf="@id/llPhone"
+            app:layout_constraintTop_toBottomOf="@id/llPhone" />
+
+
+        <LinearLayout
+            android:id="@+id/llCode"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="@id/llPhone"
+            app:layout_constraintRight_toRightOf="@id/llPhone"
+            app:layout_constraintTop_toBottomOf="@id/llPhone">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtCode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="请输入验证码"
+                android:text="@={vm.code}"
+                android:textColor="@color/ui_content_color"
+                android:textColorHint="@color/ui_hint_color"
+                android:textSize="13dp" />
+
+            <View
+                android:layout_width="@dimen/ui_line_size"
+                android:layout_height="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+                android:background="#999999" />
+
+            <TextView
+                android:id="@+id/textSend"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="发送验证码"
+                android:textColor="#9EA6B6"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/line_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/ui_line_color"
+            app:layout_constraintLeft_toLeftOf="@id/llCode"
+            app:layout_constraintRight_toRightOf="@id/llCode"
+            app:layout_constraintTop_toBottomOf="@id/llCode" />
+
+        <TextView
+            android:id="@+id/btnLogin"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="130dp"
+            android:background="@{vm.phone.length()>0?vm.code.length()>0?@drawable/button_main_selected : @drawable/button_main_unselected :@drawable/button_main_unselected}"
+            android:clickable="@{vm.phone.length()>0?vm.code.length()>0?true:false:false}"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llCode" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                android:id="@+id/imageRead"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:src="@{vm.read?@drawable/cycle_selected:@drawable/cycle_unselected}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已阅读并同意"
+                android:textColor="#999999"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户协议、未成年用户协议"
+                android:textColor="#3475EC"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="和"
+                android:textColor="#999999"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="隐私协议"
+                android:textColor="#3475EC"
+                android:textSize="11dp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -54,10 +54,10 @@
                         android:layout_height="60dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="5dp"
+                        android:src="@drawable/icon_default_person"
                         app:corner_radius="30dp"
                         app:layout_constraintLeft_toLeftOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/toMessage"
-                        tools:background="@color/mainTextBlack" />
+                        app:layout_constraintTop_toBottomOf="@id/toMessage" />
 
                     <TextView
                         android:id="@+id/nameTxt"
@@ -109,70 +109,9 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="75dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="15dp"
-                    android:background="@drawable/card_white_bg">
-
-
-                    <ImageView
-                        android:id="@+id/levelImage"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="12.5dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/icon_level_1"
-                        app:layout_constraintLeft_toLeftOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:gravity="center_horizontal"
-                        android:orientation="horizontal"
-                        app:layout_constraintBottom_toBottomOf="@id/levelImage"
-                        app:layout_constraintLeft_toLeftOf="@+id/levelImage"
-                        app:layout_constraintRight_toRightOf="@+id/levelImage">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:src="@drawable/icon_star_selected" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:src="@drawable/icon_star_unselected" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:src="@drawable/icon_star_unselected" />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="11dp"
-                        android:layout_marginRight="15dp"
-                        android:drawableRight="@drawable/icon_arrow_blue"
-                        android:drawablePadding="8dp"
-                        android:text="体育能力"
-                        android:textColor="@color/mainTextBlack"
-                        android:textSize="12dp"
-                        android:textStyle="bold"
-                        app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                <include
+                    android:id="@+id/layout_sport_level"
+                    layout="@layout/include_my_sport_level" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -238,7 +177,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginRight="15dp"
                     android:background="@drawable/card_white_bg"
                     android:orientation="vertical"

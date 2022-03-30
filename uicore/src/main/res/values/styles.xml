@@ -50,4 +50,6 @@
         <attr name="icon_text_color" format="color" />
         <attr name="icon_margin" format="dimension" />
     </declare-styleable>
+
+
 </resources>

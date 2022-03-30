@@ -4,15 +4,24 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/xiamu/.gradle/caches/transforms-3/b43e8b4356843712d6dfcbdb8abfdaa9/transformed/BaseRecyclerViewAdapterHelper-3.0.4/res/drawable/brvah_sample_footer_loading_progress.xml" value="0.1305" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/drawable/bar_color.xml" value="0.1635" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/drawable/button_main.xml" value="0.172" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/drawable/button_main_selected.xml" value="0.2" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/drawable/button_main_unselected.xml" value="0.2" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/drawable/card_white_bg.xml" value="0.2025" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/drawable/change_member_bg.xml" value="0.171" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/drawable/cycle_selelcted.xml" value="0.2115" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/drawable/cycle_unselected.xml" value="0.2115" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/drawable/dialog_bg.xml" value="0.129" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1305" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/drawable/my_class_bg.xml" value="0.171" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/drawable/my_fragment_bg.xml" value="0.155" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/drawable/my_options_bg.xml" value="0.221" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/drawable/progress_bar_background.xml" value="0.1635" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/drawable/shape_progressbar_progress.xml" value="0.1635" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/dialog_common_message.xml" value="0.22" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/home_child_fragment.xml" value="0.2046875" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/include_my_sport_level.xml" value="0.16666666666666666" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/include_toolbar.xml" value="0.21965579710144928" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/item_home_child.xml" value="0.297554347826087" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/layout_custom_progress_dialog_view.xml" value="0.1911231884057971" />
@@ -21,6 +30,7 @@
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/layout_error.xml" value="0.22056159420289856" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/layout_fotter_loadmore.xml" value="0.22056159420289856" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/layout_loading.xml" value="0.22056159420289856" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/login_with_code_fragment.xml" value="0.3333333333333333" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/main_activity.xml" value="0.146403242147923" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/main_fragment.xml" value="0.1" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/my_fragment.xml" value="0.3333333333333333" />
@@ -32,6 +42,8 @@
         <entry key="..\:/workspace/src/KotlinPredicate/uicore/src/main/res/layout/layout_icon_image.xml" value="0.29257246376811596" />
         <entry key="..\:/workspace/src/KotlinPredicate/uicore/src/main/res/layout/layout_image_from_item.xml" value="0.32653985507246375" />
         <entry key="..\:/workspace/src/KotlinPredicate/uicore/src/main/res/layout/layout_input_from_item.xml" value="0.22" />
+        <entry key="..\:/workspace/src/KotlinPredicate/uicore/src/main/res/layout/layout_phone_input.xml" value="0.27447916666666666" />
+        <entry key="..\:/workspace/src/KotlinPredicate/uicore/src/main/res/layout/layout_verification_code.xml" value="0.26811594202898553" />
       </map>
     </option>
   </component>
