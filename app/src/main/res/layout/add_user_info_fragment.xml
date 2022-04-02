@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true">
+
+
+        <include
+            android:id="@+id/include_toolbar"
+            layout="@layout/include_toolbar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include_toolbar">
+
+
+            <com.ziuici.ui.from.FromInputItem
+                android:id="@+id/nickName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:isSelect="false"
+                app:leftText="昵称"
+                app:rightHint="请输入昵称"
+                app:showLine="true" />
+
+            <com.ziuici.ui.from.FromInputItem
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:isSelect="false"
+                app:leftText="姓名"
+                app:rightHint="请输入真实姓名"
+                app:showLine="true" />
+
+            <com.ziuici.ui.from.FromInputItem
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:isSelect="true"
+                app:leftText="性别"
+                app:rightHint="请选择性别"
+                app:showLine="true" />
+
+            <com.ziuici.ui.from.FromInputItem
+                android:id="@+id/cardNo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:isSelect="false"
+                app:leftText="证件号码"
+                app:rightHint="请输入学生证件号码"
+                app:showLine="true" />
+
+            <com.ziuici.ui.from.FromInputItem
+                android:id="@+id/school"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:isSelect="true"
+                app:leftText="学校"
+                app:rightHint="请选择学校"
+                app:showLine="true" />
+
+            <com.ziuici.ui.from.FromInputItem
+                android:id="@+id/classId"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:isSelect="false"
+                app:leftText="班级ID"
+                app:rightHint="请输入班级ID"
+                app:showLine="true" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <TextView
+            android:id="@+id/btnSubmit"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="70dp"
+            android:background="@drawable/button_main_selected"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mainPageBackground"
+        android:fitsSystemWindows="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <include
+            android:id="@+id/includeToolbar"
+            layout="@layout/include_toolbar" />
+
+        <com.ziuici.ui.from.FromInputItem
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            app:isSelect="true"
+            app:leftText="账号管理"
+            app:showLine="false" />
+
+        <com.ziuici.ui.from.FromInputItem
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/white"
+            app:isSelect="true"
+            app:leftText="隐私和权限"
+            app:showLine="true" />
+
+        <com.ziuici.ui.from.FromInputItem
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            app:isSelect="true"
+            app:leftText="系统设置"
+            app:showLine="false" />
+
+        <com.ziuici.ui.from.FromInputItem
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/white"
+            app:isSelect="true"
+            app:leftText="检查更新"
+            app:showLine="true" />
+
+        <com.ziuici.ui.from.FromInputItem
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            app:isSelect="true"
+            app:leftText="关于"
+            app:showLine="false" />
+
+        <TextView
+            android:id="@+id/loginOutText"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/button_main_selected"
+            android:gravity="center"
+            android:text="退出登录"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

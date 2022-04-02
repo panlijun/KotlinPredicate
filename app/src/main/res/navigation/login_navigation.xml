@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/loginWithCodeFragment">
+
+
+    <fragment
+        android:id="@+id/loginWithCodeFragment"
+        android:name="com.kotlin.predicate.ui.login.LoginWithCodeFragment"
+        android:label="loginWithCodeFragment">
+
+        <action
+            android:id="@+id/action_loginWithCodeFragment_to_loginWithPasswordFragment"
+            app:destination="@id/loginWithPasswordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+
+        <action
+            android:id="@+id/action_loginWithCodeFragment_to_selectRoleFragment"
+            app:destination="@id/selectRoleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/loginWithPasswordFragment"
+        android:name="com.kotlin.predicate.ui.login.LoginWithPasswordFragment"
+        android:label="loginWithPasswordFragment">
+
+
+        <action
+            android:id="@+id/action_loginWithPasswordFragment_to_loginWithCodeFragment"
+            app:destination="@id/loginWithCodeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@+id/loginWithCodeFragment"
+            app:popUpToInclusive="true" />
+
+
+        <action
+            android:id="@+id/action_loginWithPasswordFragment_to_selectRoleFragment"
+            app:destination="@id/selectRoleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/selectRoleFragment"
+        android:name="com.kotlin.predicate.ui.person.SelectRoleFragment"
+        android:label="selectRoleFragment">
+        <action
+            android:id="@+id/action_selectRoleFragment_to_addUserInfoFragment"
+            app:destination="@id/addUserInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addUserInfoFragment"
+        android:name="com.kotlin.predicate.ui.person.AddUserInfoFragment"
+        android:label="addUserInfoFragment">
+
+    </fragment>
+
+</navigation>

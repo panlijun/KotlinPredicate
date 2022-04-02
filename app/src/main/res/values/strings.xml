@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">KotlinPredicate</string>
+    <string name="InSportApp">KotlinPredicate</string>
 
     <!--首页顶部栏-->
     <string name="main_menu_home">首页</string>

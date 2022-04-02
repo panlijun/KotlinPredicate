@@ -2,25 +2,43 @@ package com.kotlin.predicate.ui.login
 
 import android.os.Bundle
 import androidx.fragment.app.viewModels
-import com.blankj.utilcode.util.ToastUtils
+import androidx.lifecycle.Observer
+import com.kotlin.predicate.R
+import com.kotlin.predicate.app.appViewModel
 import com.kotlin.predicate.app.base.BaseFragment
 import com.kotlin.predicate.databinding.LoginWithCodeFragmentBinding
+import com.mvvm.core.ext.nav
+import com.mvvm.core.ext.navigateAction
 
-class LoginWithCodeFragment : BaseFragment<LoginWithCodeViewModel, LoginWithCodeFragmentBinding>() {
+class LoginWithCodeFragment : BaseFragment<LoginViewModel, LoginWithCodeFragmentBinding>() {
 
-    val viewModel :LoginWithCodeViewModel by viewModels()
+    val viewModel: LoginViewModel by viewModels()
+
     companion object {
         fun newInstance() = LoginWithCodeFragment()
     }
 
     override fun initView(savedInstanceState: Bundle?) {
-        mDatabind.vm =viewModel
+        mDatabind.vm = viewModel
         mDatabind.btnLogin.setOnClickListener {
-            ToastUtils.showShort("1111")
+            viewModel.login()
         }
 
         mDatabind.imageRead.setOnClickListener { viewModel.read.set(!viewModel.read.get()) }
+        mDatabind.toLoginPassword.setOnClickListener {
+            nav()
+                .navigateAction(R.id.action_loginWithCodeFragment_to_loginWithPasswordFragment)
+        }
     }
 
+    override fun createObserver() {
+        appViewModel.loginInfo.observeInFragment(this, Observer {
+            if (it != null && it.userDTO == null) {
+                nav().navigateAction(
+                    R.id.action_loginWithCodeFragment_to_selectRoleFragment
+                )
+            }
+        })
+    }
 
 }

@@ -16,14 +16,17 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
 
+        <action
+            android:id="@+id/action_mainFragment_to_SettingFragment"
+            app:destination="@id/settingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
-
 
     <fragment
-        android:id="@+id/loginWithCodeFragment"
-        android:name="com.kotlin.predicate.ui.login.LoginWithCodeFragment"
-        android:label="loginWithCodeFragment">
-
-    </fragment>
-
+        android:id="@+id/settingFragment"
+        android:name="com.kotlin.predicate.ui.setting.SettingCenterFragment"
+        android:label="settingFragment" />
 </navigation>

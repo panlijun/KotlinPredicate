@@ -19,6 +19,8 @@
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/drawable/my_options_bg.xml" value="0.221" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/drawable/progress_bar_background.xml" value="0.1635" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/drawable/shape_progressbar_progress.xml" value="0.1635" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/activity_position.xml" value="0.17864583333333334" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/add_user_info_fragment.xml" value="0.2635416666666667" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/dialog_common_message.xml" value="0.22" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/home_child_fragment.xml" value="0.2046875" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/include_my_sport_level.xml" value="0.16666666666666666" />
@@ -31,9 +33,11 @@
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/layout_fotter_loadmore.xml" value="0.22056159420289856" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/layout_loading.xml" value="0.22056159420289856" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/login_with_code_fragment.xml" value="0.3333333333333333" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/login_with_password_fragment.xml" value="0.24427083333333333" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/main_activity.xml" value="0.146403242147923" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/main_fragment.xml" value="0.1" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/my_fragment.xml" value="0.3333333333333333" />
+        <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/layout/setting_center_fragment.xml" value="0.23020833333333332" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/menu/main_bottom_navigation.xml" value="0.2708333333333333" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/menu/my_right.xml" value="0.3390625" />
         <entry key="..\:/workspace/src/KotlinPredicate/app/src/main/res/menu/my_tool_bar.xml" value="0.3390625" />

@@ -172,16 +172,15 @@ fun Toolbar.init(titleStr: String = ""): Toolbar {
  * 初始化有返回键的toolbar
  */
 fun Toolbar.initClose(
-    titleStr: String = "",
     backImg: Int = R.drawable.ic_back,
     onBack: (toolbar: Toolbar) -> Unit
 ): Toolbar {
-    setBackgroundColor(SettingUtil.getColor(appContext))
-    title = titleStr.toHtml()
+
     setNavigationIcon(backImg)
     setNavigationOnClickListener { onBack.invoke(this) }
     return this
 }
+
 
 /**
  * 根据控件的类型设置主题，注意，控件具有优先级， 基本类型的控件建议放到最后，像 Textview，FragmentLayout，不然会出现问题，

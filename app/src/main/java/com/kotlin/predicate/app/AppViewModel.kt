@@ -2,8 +2,10 @@ package com.kotlin.predicate.app
 
 import com.kotlin.predicate.app.util.CacheUtil
 import com.kotlin.predicate.app.util.SettingUtil
+import com.kotlin.predicate.data.model.AccountDTO
+import com.kotlin.predicate.data.model.LoginInfo
+import com.kotlin.predicate.data.model.UserInfo
 import com.kunminx.architecture.ui.callback.UnPeekLiveData
-import com.mvvm.core.base.appContext
 import com.mvvm.core.base.viewmodel.BaseViewModel
 import com.mvvm.core.callback.livedata.event.EventLiveData
 
@@ -14,20 +16,52 @@ import com.mvvm.core.callback.livedata.event.EventLiveData
 class AppViewModel : BaseViewModel() {
 
     //App的账户信息
-//    var userInfo = UnPeekLiveData.Builder<UserInfo>().setAllowNullValue(true).create()
+    var loginInfo = UnPeekLiveData.Builder<LoginInfo>().setAllowNullValue(true).create()
 
-    //App主题颜色 中大型项目不推荐以这种方式改变主题颜色，比较繁琐耦合，且容易有遗漏某些控件没有设置主题色
-    var appColor = EventLiveData<Int>()
+    //当前用户信息，单账号对应多用户
+    var userInfo = UnPeekLiveData.Builder<UserInfo>().setAllowNullValue(true).create()
+
 
     //App 列表动画
     var appAnimation = EventLiveData<Int>()
 
     init {
-        //默认值保存的账户信息，没有登陆过则为null
-//        userInfo.value = CacheUtil.getUser()
-        //默认值颜色
-        appColor.value = SettingUtil.getColor(appContext)
+        val loginValue = CacheUtil.getLoginInfo()
+        if (loginValue != null && loginValue.userDTO == null) {
+            //登录了但是没有用户信息 重新登录
+            loginInfo.value = null
+            userInfo.value = null
+            CacheUtil.setLoginInfo(null)
+        } else {
+            loginInfo.value = loginValue
+            userInfo.value = loginInfo.value?.userDTO
+        }
+
         //初始化列表动画
         appAnimation.value = SettingUtil.getListMode()
+    }
+
+    fun loginOut() {
+        CacheUtil.setLoginInfo(null)
+        appViewModel.loginInfo.value = null
+        appViewModel.userInfo.value = null
+    }
+
+    fun loginIn(loginInfo: LoginInfo) {
+        CacheUtil.setLoginInfo(loginInfo)
+        appViewModel.loginInfo.value = loginInfo
+        appViewModel.userInfo.value = appViewModel.loginInfo.value?.userDTO
+    }
+
+    fun switchUser(userInfo: UserInfo) {
+        appViewModel.loginInfo.value?.userDTO = userInfo
+        appViewModel.userInfo.value = userInfo
+        CacheUtil.setLoginInfo(appViewModel.loginInfo.value)
+    }
+
+
+    fun simulateLogin(phone: String) {
+        // mock  by plj
+        loginIn(LoginInfo(accountDTO = AccountDTO(phone = phone)))
     }
 }

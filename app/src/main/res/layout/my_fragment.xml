@@ -73,6 +73,7 @@
                         app:layout_constraintTop_toTopOf="@id/headImage" />
 
                     <TextView
+                        android:id="@+id/classText"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginBottom="7dp"

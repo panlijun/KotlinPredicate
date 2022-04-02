@@ -16,5 +16,5 @@
     <color name="subTextBlack">#5A606A</color>
     <color name="mainBlueSelected">#3475EC</color>
     <color name="mainBlueUnSelected">#99B8F0</color>
-
+    <color name="mainPageBackground">#F8F8FC</color>
 </resources>
