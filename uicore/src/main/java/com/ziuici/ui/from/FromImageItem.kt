@@ -85,8 +85,8 @@ class FromImageItem : RelativeLayout, FromItemListener {
         return imgUrl
     }
 
-    override fun setContent(content: String) {
-        imgUrl = content
+    override fun setContent(content: CharSequence) {
+        imgUrl = content.toString()
         image?.let { Glide.with(this).load(content).into(it) }
         if (showRed && content.isNotEmpty()) {
             showRed = false

@@ -8,7 +8,7 @@ interface FromItemListener {
 
     fun getContent(): String
 
-    fun setContent(content: String) {}
+    fun setContent(content: CharSequence) {}
 
     fun setOnClick(click: View.OnClickListener)
 }
