@@ -1,15 +1,15 @@
 package com.kotlin.predicate.app
 
 import ErrorCallback
-import android.support.multidex.MultiDex
 import android.view.Gravity
 import android.widget.Toast
-import com.blankj.utilcode.util.ToastUtils
+import androidx.multidex.MultiDex
 import com.kingja.loadsir.callback.SuccessCallback
 import com.kingja.loadsir.core.LoadSir
 import com.kotlin.predicate.app.ext.getProcessName
 import com.kotlin.predicate.app.widget.callBack.EmptyCallback
 import com.kotlin.predicate.app.widget.callBack.LoadingCallback
+import com.luck.picture.lib.utils.ToastUtils
 import com.mvvm.core.base.BaseApp
 import com.tencent.mmkv.MMKV
 
@@ -41,7 +41,7 @@ class App : BaseApp() {
         eventViewModelInstance = getAppViewModelProvider().get(EventViewModel::class.java)
         appViewModelInstance = getAppViewModelProvider().get(AppViewModel::class.java)
         MultiDex.install(this)
-        ToastUtils.setGravity(Gravity.CENTER,0,0)
+//        ToastUtils.setGravity(Gravity.CENTER,0,0)
 
         //界面加载管理 初始化
         LoadSir.beginBuilder()

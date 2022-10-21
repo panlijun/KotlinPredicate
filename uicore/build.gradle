@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    compileSdk 30
+    compileSdk 31
 
     defaultConfig {
-        minSdk 22
-        targetSdk 30
+        minSdk 24
+        targetSdk 31
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -35,16 +35,29 @@ android {
 
 dependencies {
 
-    implementation "androidx.core:core-ktx:1.6.0"
-    implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'com.google.android.material:material:1.3.0'
-
-    //Android UI 快速开发 圆角，边框，Gradient背景渐变，控件State各个状态UI样式，阴影，水波纹
-    api 'com.github.RuffianZhong:RWidgetHelper:androidx.v0.0.9'
+    implementation "androidx.core:core-ktx:1.7.0"
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
     //glide
     api 'com.github.bumptech.glide:glide:4.11.0'
-    //BasePopup
-    implementation 'io.github.razerdp:BasePopup:3.2.0'
+    //BasePopup  https://github.com/razerdp/BasePopup
+    api 'io.github.razerdp:BasePopup:3.2.0'
+    //Android UI 快速开发 圆角，边框，Gradient背景渐变，控件State各个状态UI样式，阴影，水波纹
+    //https://github.com/RuffianZhong/RWidgetHelper
+    api 'com.github.RuffianZhong:RWidgetHelper:androidx.v0.0.9'
+    //AndroidPicker   https://github.com/gzu-liyujiang/AndroidPicker
+    api 'com.github.gzu-liyujiang.AndroidPicker:Common:4.1.7'
+    api 'com.github.gzu-liyujiang.AndroidPicker:WheelView:4.1.7'
+    api 'com.github.gzu-liyujiang.AndroidPicker:WheelPicker:4.1.7'
+    api 'com.github.gzu-liyujiang.AndroidPicker:AddressPicker:4.1.7'
+    api 'com.github.gzu-liyujiang.AndroidPicker:CalendarPicker:4.1.7'
+//    implementation 'com.github.gzu-liyujiang.AndroidPicker:ImagePicker:4.1.7'
+//    implementation 'com.github.gzu-liyujiang.AndroidPicker:FilePicker:4.1.7'
+//    implementation 'com.github.gzu-liyujiang.AndroidPicker:ColorPicker:4.1.7'
+    //指示器库 https://github.com/hackware1993/MagicIndicator
+    api 'com.github.hackware1993:MagicIndicator:1.7.0'
+    //ScaleView   https://github.com/ChiuLui/ScaleView
+    api 'com.github.ChiuLui:ScaleView:1.1.1'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

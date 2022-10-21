@@ -3,8 +3,9 @@ pluginManagement {
         gradlePluginPortal()
         google()
         //阿里云jcenter仓库
-        maven{ url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
         maven { url 'https://jitpack.io' }
+        maven { url 'https://repo1.maven.org/maven2/' }
         mavenCentral()
     }
 
@@ -14,8 +15,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         //阿里云jcenter仓库
-        maven{ url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
         maven { url 'https://jitpack.io' }
+        maven { url 'https://repo1.maven.org/maven2/' }
         mavenCentral()
     }
 }
@@ -23,3 +25,4 @@ rootProject.name = "KotlinPredicate"
 include ':app'
 include ':mvvmcore'
 include ':uicore'
+include ':nativelib'

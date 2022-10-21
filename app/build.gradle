@@ -7,12 +7,12 @@ plugins {
 }
 
 android {
-    compileSdk 30
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.kotlin.predicate"
-        minSdk 22
-        targetSdk 30
+        minSdk 24
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -37,46 +37,95 @@ android {
         dataBinding = true
 //        viewBinding = true
     }
-    buildToolsVersion '30.0.3'
+    buildToolsVersion '31.0.0'
 }
 
 dependencies {
-
-    implementation "androidx.core:core-ktx:1.6.0"
-    implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
-    implementation 'com.android.support:multidex:1.0.3'
-
     implementation project(path: ":mvvmcore")
     implementation project(path: ":uicore")
 
-    //dialog
+    implementation "androidx.core:core-ktx:1.7.0"
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    implementation "androidx.multidex:multidex:2.0.1"
+    implementation 'androidx.exifinterface:exifinterface:1.3.3'
+    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+
+
+    // Use the most recent version of CameraX, currently that is alpha04
+    //相机相关
+    def camerax_version = "1.0.2"
+    implementation "androidx.camera:camera-core:${camerax_version}"
+    implementation "androidx.camera:camera-camera2:${camerax_version}"
+    implementation "androidx.camera:camera-lifecycle:${camerax_version}"
+    implementation "androidx.camera:camera-view:1.0.0-alpha32"
+
+    def room_version = "2.4.2"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-testing:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+
+
+    //阿里云 OSS  https://github.com/aliyun/aliyun-oss-android-sdk
+    implementation 'com.aliyun.dpa:oss-android-sdk:2.9.9'
+
+    // 友盟统计SDK
+    implementation 'com.umeng.umsdk:common:9.4.7'// 必选
+    implementation 'com.umeng.umsdk:asms:1.4.0'// 必选
+
+    // 微信SDK 混淆OK
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.15'
+
+    //QQ SDK  混淆暂时没找到
+    implementation 'com.tencent.tauth:qqopensdk:3.52.0'
+
+
+    //dialog  https://github.com/afollestad/material-dialogs
     implementation "com.afollestad.material-dialogs:lifecycle:3.3.0"
     implementation "com.afollestad.material-dialogs:core:3.3.0"
     implementation "com.afollestad.material-dialogs:color:3.3.0"
     implementation "com.afollestad.material-dialogs:datetime:3.3.0"
     implementation "com.afollestad.material-dialogs:bottomsheets:3.3.0"
-    //util
-    implementation 'com.blankj:utilcodex:1.26.0'
-    //微信开源项目，替代SP
+    //util  https://github.com/Blankj/AndroidUtilCode
+    implementation 'com.blankj:utilcodex:1.31.0'
+    //微信开源项目，替代SP https://github.com/Tencent/MMKV
     implementation 'com.tencent:mmkv:1.0.22'
-    //管理界面状态库
+    //管理界面状态库 https://github.com/KingJA/LoadSir
     implementation 'com.kingja.loadsir:loadsir:1.3.8'
-    //指示器库
-    implementation 'com.github.hackware1993:MagicIndicator:1.7.0'
-    //轮播图
+    //轮播图 https://github.com/zhpanvip/BannerViewPager
     implementation 'com.github.zhpanvip:BannerViewPager:3.1.5'
-    //BaseAdapter
+    //BaseAdapter https://github.com/CymChad/BaseRecyclerViewAdapterHelper
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
-    //第三方recyclerview
+    //第三方recyclerview https://github.com/yanzhenjie/SwipeRecyclerView
     implementation 'com.yanzhenjie.recyclerview:x:1.3.2'
+    //GSYVideoPlayer视频播放器 https://github.com/CarGuo/GSYVideoPlayer
+    implementation('com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer:v8.1.9-release-jitpack') {
+        exclude group: 'androidx.appcompat'
+        exclude group: 'androidx.core'
+    }
+    //XXPermissions  https://github.com/getActivity/XXPermissions
+    implementation 'com.github.getActivity:XXPermissions:13.5'
+    //progressbar    https://github.com/lopspower/CircularProgressBar
+    implementation 'com.mikhaellopez:circularprogressbar:3.1.0'
+    //AgentWeb       https://github.com/Justson/AgentWeb
+    implementation 'com.github.Justson.AgentWeb:agentweb-core:v4.1.9-androidx' // (必选)
+//    implementation 'com.github.Justson.AgentWeb:agentweb-filechooser:v4.1.9-androidx'
+//    implementation 'com.github.Justson:Downloader:v4.1.9-androidx'
 
+    // PictureSelector basic (Necessary) https://github.com/LuckSiege/PictureSelector
+    implementation 'io.github.lucksiege:pictureselector:v3.0.9'
+    implementation 'io.github.lucksiege:compress:v3.0.9'
+    implementation 'io.github.lucksiege:ucrop:v3.0.9'
+    // implementation 'io.github.lucksiege:camerax:v3.0.9'
 
-    implementation 'androidx.annotation:annotation:1.3.0'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
